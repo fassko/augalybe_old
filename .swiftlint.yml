@@ -1,0 +1,8 @@
+included:
+  - auGalybe
+  - auGalybeTests
+
+disabled_rules:
+  - trailing_whitespace
+
+reporter: "xcode"

@@ -10,7 +10,7 @@ import XCTest
 
 @testable import auGalybe
 
-class auGalybeTests: XCTestCase {
+class AuGalybeTests: XCTestCase {
   func testCoordintesCoorect() {
     let restaurant = Restaurant(title: "",
                                 address: "",
@@ -42,7 +42,7 @@ class auGalybeTests: XCTestCase {
   func testLoadData() {
     let loadDataExectation = expectation(description: "dataLoadExpectation")
     
-    let api = auGalybeAPI()
+    let api = AuGalybeAPI()
     api.restaurants { result in
       switch result {
       case .success(let data):
