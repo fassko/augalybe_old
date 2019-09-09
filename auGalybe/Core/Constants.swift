@@ -12,4 +12,8 @@ extension UIColor {
   static var green: UIColor {
     return UIColor(named: "green")!
   }
+  
+  static var grey: UIColor {
+    return UIColor(named: "grey")!
+  }
 }

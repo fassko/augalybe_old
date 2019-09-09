@@ -120,18 +120,18 @@ extension MapViewController: MKMapViewDelegate {
     mapView.deselectAnnotation(view.annotation, animated: true)
   }
   
-//  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-//    for view in view.subviews where view.subviews.count > 0 {
-//      let colloutView = view.subviews[0]
-//      if colloutView.subviews.count > 0 {
-//        if colloutView.subviews[0].subviews.count > 0 {
-//          colloutView.subviews[0].subviews.forEach { view in
-//            if let label = view as? UILabel {
-//              label.textColor = .grey
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    for view in view.subviews where view.subviews.count > 0 {
+      let colloutView = view.subviews[0]
+      if colloutView.subviews.count > 0 {
+        if colloutView.subviews[0].subviews.count > 0 {
+          colloutView.subviews[0].subviews.forEach { view in
+            if let label = view as? UILabel {
+              label.textColor = .grey
+            }
+          }
+        }
+      }
+    }
+  }
 }
