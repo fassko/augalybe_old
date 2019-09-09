@@ -15,14 +15,14 @@ class AuGalybeTests: XCTestCase {
     let restaurant = Restaurant(title: "",
                                 address: "",
                                 city: "",
-                                coordinates: "1.2,1.3",
+                                coordinates: "54.694728, 25.287477",
                                 description: "",
                                 picture: Picture(src: "", alt: ""),
                                 pictures: [],
                                 facebook: "",
                                 website: "")
-    XCTAssertEqual(restaurant.latitude, 1.2)
-    XCTAssertEqual(restaurant.longitue, 1.3)
+    XCTAssertEqual(restaurant.latitude, 54.694728)
+    XCTAssertEqual(restaurant.longitude, 25.287477)
   }
   
   func testCoordinatesWrong() {
@@ -36,7 +36,7 @@ class AuGalybeTests: XCTestCase {
                                 facebook: "",
                                 website: "")
     XCTAssertNil(restaurant.latitude)
-    XCTAssertNil(restaurant.longitue)
+    XCTAssertNil(restaurant.longitude)
   }
   
   func testLoadData() {

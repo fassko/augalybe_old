@@ -13,13 +13,13 @@ class AuGalybeNavigationController: UINavigationController {
   override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     
-//    navigationBar.tintColor = .pink
-//    navigationBar.titleTextAttributes = [
-//      NSAttributedString.Key.foregroundColor: UIColor.pink
-//    ]
-//    navigationBar.largeTitleTextAttributes = [
-//      NSAttributedString.Key.foregroundColor: UIColor.pink
-//    ]
+    navigationBar.tintColor = .green
+    navigationBar.titleTextAttributes = [
+      NSAttributedString.Key.foregroundColor: UIColor.green
+    ]
+    navigationBar.largeTitleTextAttributes = [
+      NSAttributedString.Key.foregroundColor: UIColor.green
+    ]
   }
   
   required init?(coder aDecoder: NSCoder) {

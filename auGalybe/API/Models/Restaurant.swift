@@ -39,7 +39,7 @@ struct Restaurant: Decodable {
     return Double(first)
   }
   
-  var longitue: Double? {
+  var longitude: Double? {
     guard let last = coordinateParts.last else {
       return nil
     }
@@ -48,6 +48,6 @@ struct Restaurant: Decodable {
   }
   
   private var coordinateParts: [String] {
-    Array(coordinates.split(separator: ",")).map { String($0) }
+    Array(coordinates.split(separator: ",")).map { String($0).trimmingCharacters(in: .whitespacesAndNewlines) }
   }
 }

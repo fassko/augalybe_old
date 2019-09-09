@@ -20,12 +20,8 @@ struct AuGalybeAPI {
       } else {
         do {
           let decodedRestaurants = try JSONDecoder().decode(Restaurants.self, from: data!).restaurants
-          let restaurants = decodedRestaurants.compactMap { restaurant -> Restaurant? in
-            guard restaurant.restaurant.longitue == nil || restaurant.restaurant.latitude == nil else {
-              return nil
-            }
-            
-            return restaurant.restaurant
+          let restaurants = decodedRestaurants.map { $0.restaurant }.filter {
+            $0.latitude != nil && $0.longitude != nil
           }
           
           DispatchQueue.main.async {
