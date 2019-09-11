@@ -31,6 +31,8 @@
 		63A9BBF023294FD70022BB15 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 63A9BBEF23294FD70022BB15 /* Kingfisher */; };
 		63A9BBF523295C090022BB15 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9BBF423295C090022BB15 /* ListCoordinator.swift */; };
 		63A9BBF923295C770022BB15 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9BBF823295C770022BB15 /* ListTableViewController.swift */; };
+		63A9BBFB232966290022BB15 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9BBFA232966290022BB15 /* AboutViewController.swift */; };
+		63A9BBFD232966480022BB15 /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9BBFC232966480022BB15 /* AboutCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		6399D34B2322E3EB009B9F5A /* AuGalybeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuGalybeAPI.swift; sourceTree = "<group>"; };
 		63A9BBF423295C090022BB15 /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		63A9BBF823295C770022BB15 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		63A9BBFA232966290022BB15 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		63A9BBFC232966480022BB15 /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,7 @@
 				6346DA112326D13B0025D10A /* Map */,
 				635DE42B23294D4D009058AA /* RestaurantDetails */,
 				63A9BBF623295C470022BB15 /* List */,
-				63A9BBF723295C5F0022BB15 /* Details */,
+				63A9BBF723295C5F0022BB15 /* About */,
 				6346DA1D2326E0330025D10A /* User Interface */,
 				63128628231955C10064087E /* Info.plist */,
 			);
@@ -184,6 +188,7 @@
 				6336B5E5232583590060CFC4 /* Coordinator.swift */,
 				6346DA152326D2E40025D10A /* MapCoordinator.swift */,
 				63A9BBF423295C090022BB15 /* ListCoordinator.swift */,
+				63A9BBFC232966480022BB15 /* AboutCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -215,11 +220,12 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		63A9BBF723295C5F0022BB15 /* Details */ = {
+		63A9BBF723295C5F0022BB15 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				63A9BBFA232966290022BB15 /* AboutViewController.swift */,
 			);
-			path = Details;
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,8 +369,10 @@
 				6336B5DF2325830C0060CFC4 /* Picture.swift in Sources */,
 				6346DA132326D1680025D10A /* MapViewController.swift in Sources */,
 				6336B5E12325831B0060CFC4 /* Restaurant.swift in Sources */,
+				63A9BBFD232966480022BB15 /* AboutCoordinator.swift in Sources */,
 				6399D34C2322E3EB009B9F5A /* AuGalybeAPI.swift in Sources */,
 				6346DA1A2326D92A0025D10A /* Constants.swift in Sources */,
+				63A9BBFB232966290022BB15 /* AboutViewController.swift in Sources */,
 				6346DA182326D33B0025D10A /* Extensions.swift in Sources */,
 				6336B5E82325837B0060CFC4 /* AuGalybeNavigationController.swift in Sources */,
 				6336B5DA232582E20060CFC4 /* Restaurants.swift in Sources */,

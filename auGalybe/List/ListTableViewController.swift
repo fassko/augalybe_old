@@ -58,9 +58,6 @@ class ListTableViewController: UITableViewController, Storyboarded {
     title = "List".localized
     navigationItem.largeTitleDisplayMode = .always
     navigationController?.navigationBar.prefersLargeTitles = true
-    navigationController?.navigationBar.largeTitleTextAttributes = [
-      NSAttributedString.Key.foregroundColor: UIColor.green
-    ]
     
     loadData()
     
