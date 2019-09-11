@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   var mapCoordinator: MapCoordinator?
+  var listCoordinator: ListCoordinator?
   
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -25,8 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     mapTabBarItem.accessibilityLabel = "Map"
     mapNavController.tabBarItem = mapTabBarItem
     
+    let listNavController = AuGalybeNavigationController()
+    listCoordinator = ListCoordinator(navigationController: listNavController)
+    listCoordinator?.start()
+    let listTabBarItem = UITabBarItem(title: "List".localized, image: UIImage(named: "list"), tag: 1)
+    mapTabBarItem.accessibilityLabel = "List"
+    listNavController.tabBarItem = listTabBarItem
+    
     let tabBarController = UITabBarController()
-    tabBarController.viewControllers = [mapNavController]
+    tabBarController.viewControllers = [mapNavController, listNavController]
     tabBarController.tabBar.tintColor = .green
     
     window = UIWindow(frame: UIScreen.main.bounds)
