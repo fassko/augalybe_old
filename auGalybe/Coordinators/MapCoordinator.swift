@@ -20,4 +20,10 @@ class MapCoordinator: Coordinator {
     mapViewController.coordinator = self
     navigationController.pushViewController(mapViewController, animated: false)
   }
+  
+  func show(_ restaurant: Restaurant) {
+    let restaurantViewController = RestaurantViewController.instantiate()
+    restaurantViewController.restaurant = restaurant
+    navigationController.pushViewController(restaurantViewController, animated: true)
+  }
 }

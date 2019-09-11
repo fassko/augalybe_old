@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,7 +26,9 @@
 		6346DA1A2326D92A0025D10A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346DA192326D92A0025D10A /* Constants.swift */; };
 		6346DA1C2326DA870025D10A /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346DA1B2326DA870025D10A /* RestaurantAnnotation.swift */; };
 		6346DA202326E07B0025D10A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6346DA222326E07B0025D10A /* Localizable.strings */; };
+		635DE42D23294D66009058AA /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635DE42C23294D66009058AA /* RestaurantViewController.swift */; };
 		6399D34C2322E3EB009B9F5A /* AuGalybeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399D34B2322E3EB009B9F5A /* AuGalybeAPI.swift */; };
+		63A9BBF023294FD70022BB15 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 63A9BBEF23294FD70022BB15 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		6346DA1B2326DA870025D10A /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
 		6346DA212326E07B0025D10A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6346DA232326E08D0025D10A /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		635DE42C23294D66009058AA /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		6399D34B2322E3EB009B9F5A /* AuGalybeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuGalybeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A9BBF023294FD70022BB15 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 				6336B5E2232583370060CFC4 /* Core */,
 				6346DA142326D2CC0025D10A /* Coordinators */,
 				6346DA112326D13B0025D10A /* Map */,
+				635DE42B23294D4D009058AA /* RestaurantDetails */,
 				6346DA1D2326E0330025D10A /* User Interface */,
 				63128628231955C10064087E /* Info.plist */,
 			);
@@ -187,6 +192,14 @@
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
+		635DE42B23294D4D009058AA /* RestaurantDetails */ = {
+			isa = PBXGroup;
+			children = (
+				635DE42C23294D66009058AA /* RestaurantViewController.swift */,
+			);
+			path = RestaurantDetails;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +217,9 @@
 			dependencies = (
 			);
 			name = auGalybe;
+			packageProductDependencies = (
+				63A9BBEF23294FD70022BB15 /* Kingfisher */,
+			);
 			productName = auGalybe;
 			productReference = 63128617231955C00064087E /* auGalybe.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +271,9 @@
 				lt,
 			);
 			mainGroup = 6312860E231955C00064087E;
+			packageReferences = (
+				63A9BBEE23294FD70022BB15 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 63128618231955C00064087E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6336B5E6232583590060CFC4 /* Coordinator.swift in Sources */,
+				635DE42D23294D66009058AA /* RestaurantViewController.swift in Sources */,
 				6336B5DC232582F00060CFC4 /* RestaurantWrapper.swift in Sources */,
 				6346DA162326D2E40025D10A /* MapCoordinator.swift in Sources */,
 				6336B5DF2325830C0060CFC4 /* Picture.swift in Sources */,
@@ -604,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63A9BBEE23294FD70022BB15 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = xcode11;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63A9BBEF23294FD70022BB15 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63A9BBEE23294FD70022BB15 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6312860F231955C00064087E /* Project object */;
 }

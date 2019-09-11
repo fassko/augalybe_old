@@ -9,10 +9,17 @@
 import Foundation
 
 struct AuGalybeAPI {
-  func restaurants(_ completion: @escaping (Result<[Restaurant], Error>) -> Void) {
+  
+  private var dataURL: URL {
+    guard CommandLine.arguments.contains("-localData") else {
+      return URL(string: "https://box.tustinarvai.lt/tools/augalybe-app/api/restaurants")!
+    }
     
-    let url = URL(string: "https://box.tustinarvai.lt/tools/augalybe-app/api/restaurants")!
-    let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
+    return Bundle.main.url(forResource: "restaurants", withExtension: "json")!
+  }
+  
+  func restaurants(_ completion: @escaping (Result<[Restaurant], Error>) -> Void) {
+    let request = URLRequest(url: dataURL, cachePolicy: .reloadIgnoringLocalCacheData)
     
     URLSession.shared.dataTask(with: request) { data, _, error in
       if let error = error {

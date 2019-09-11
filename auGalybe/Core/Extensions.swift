@@ -36,6 +36,26 @@ extension String {
   }
 }
 
+extension UIPasteboard {
+  func copy(_ text: String) {
+    string = text
+    UINotificationFeedbackGenerator().notificationOccurred(.success)
+  }
+}
+
+extension UIButton {
+  func setTitle(_ title: String) {
+    setTitle(title, for: .normal)
+    setTitle(title, for: .highlighted)
+    setTitle(title, for: .disabled)
+    setTitle(title, for: .selected)
+    
+    setTitle(title, for: .focused)
+    setTitle(title, for: .application)
+    setTitle(title, for: .reserved)
+  }
+}
+
 extension Locale {
   var currentLanguage: String {
     switch languageCode {

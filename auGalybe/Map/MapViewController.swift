@@ -112,11 +112,11 @@ extension MapViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                calloutAccessoryControlTapped control: UIControl) {
-    guard let storeAnnotation = view.annotation as? RestaurantAnnotation else {
+    guard let restaurantAnnotation = view.annotation as? RestaurantAnnotation else {
       return
     }
     
-//    coordinator.show(storeAnnotation.place)
+    coordinator.show(restaurantAnnotation.restaurant)
     mapView.deselectAnnotation(view.annotation, animated: true)
   }
   
